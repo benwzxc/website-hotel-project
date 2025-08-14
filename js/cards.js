@@ -30,7 +30,7 @@ function fetchAndDisplayHotels(jsonPath) {
 
 document.addEventListener('DOMContentLoaded', () => {
   const path = window.location.pathname;
-  const pathPart = path.split('/')[1]; 
+  const pathPart = path.split('/')[3]; 
   if (pathPart) {
     const region = pathPart.split('_')[0];
     const jsonPath = `../json/${region}-hotels.json`; 
