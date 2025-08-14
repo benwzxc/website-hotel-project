@@ -31,11 +31,12 @@ function fetchAndDisplayHotels(jsonPath) {
 document.addEventListener('DOMContentLoaded', () => {
   const path = window.location.pathname;
   const pathPart = path.split('/')[1]; 
-
   if (pathPart) {
     const region = pathPart.split('_')[0];
     const jsonPath = `../json/${region}-hotels.json`; 
     cards.innerHTML = '<p class="loading-message">Finding the best hotels...</p>';
     fetchAndDisplayHotels(jsonPath);
-  }
+} else if (!pathPart) {
+    return;
+}
 });
