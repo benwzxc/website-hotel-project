@@ -3,3 +3,9 @@
   text-decoration: none;
   color: #000;
 }
+
+body{
+  background: beige;
+  height: 100vh;
+  width: 100vw;
+}
